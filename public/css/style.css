@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.model-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #fa5252;
+}
+
+.tag-cloud a {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.tag-cloud a:hover {
+    background: #dee2e6;
+}
+
+/* SEO Content Styles */
+.seo-content h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; }
+.seo-content h2 { font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+.seo-content h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.8rem; }
+.seo-content h4 { font-size: 1.25rem; font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+.seo-content p { margin-bottom: 1rem; line-height: 1.6; }
+.seo-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+.seo-content li { margin-bottom: 0.5rem; }

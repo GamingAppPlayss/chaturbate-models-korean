@@ -1,0 +1,25 @@
+<h1 class="text-3xl font-bold mb-6 text-center">라이브 캠 모델</h1>
+<div id="model-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <% models.forEach(model => { %>
+        <div class="model-card">
+            <a href="/model/<%= makeSlug(model.username) %>" class="block h-full">
+                <div class="relative pb-[56.25%]">
+                    <img src="<%= model.image_url %>" alt="<%= model.username %>" class="absolute top-0 left-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 text-white">
+                        <div class="font-bold"><%= model.username %></div>
+                        <div class="text-xs flex justify-between">
+                            <span><%= model.age %>세</span>
+                            <span><%= model.num_users %>명 시청중</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    <% }); %>
+</div>
+
+<div class="text-center mt-8 mb-12">
+    <button id="load-more" class="btn-primary text-lg cursor-pointer">더 보기 (Load More)</button>
+</div>
+
+<%- seoText %>
